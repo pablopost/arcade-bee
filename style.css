@@ -1,5 +1,7 @@
 <style>
-
+.container-narrow {
+	background-color: #FF0000;
+}
 /* book - naglowki <label> */
 label[for] {
     font-weight: 600;
