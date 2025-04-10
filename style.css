@@ -1,6 +1,6 @@
 <style>
 .container-narrow {
-	background-color: #FF0000;
+	background-color: #FF0000 !important;
 }
 /* book - naglowki <label> */
 label[for] {
