@@ -1,0 +1,182 @@
+<style>
+.container-narrow {
+	background-color: #FF0000 !important;
+}
+/* book - naglowki <label> */
+label[for] {
+    font-weight: 600;
+    font-family: var(--type--display);
+    font-size: var(--_sizing---text--text-5xl);
+    text-align: center;
+    display: block;
+}
+
+/* people section input */
+input[type="number"] {
+	background-color: transparent;
+	border-style: none;
+  text-align: center;
+  font-size: var(--_sizing---text--text-2xl);
+  font-weight: 600;
+  width: 20px;
+   -moz-appearance:textfield; /* Firefox */
+}
+
+/* people section input - odstylowanie */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;  /* display: none; <- Crashes Chrome on hover */
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+/* customer details section - inputs */
+#bookero-plugin-customer-name, #bookero-plugin-customer-email, #bookero-plugin-discount-code, input[type="tel"] {
+  border-radius: 9px;
+	border: 2px solid var(--mustard--600);
+	background-color: var(--mustard--900);
+  height: 60px;
+  width: 100%;
+  max-width: 440px;
+  font-size: 20px;
+  color: var(--mustard--400);
+  padding: 18px;
+  color: #FF0000;
+  margin: 9px auto;
+  outline: none;
+}
+#bookero-plugin-customer-name:hover, #bookero-plugin-customer-email:hover, input[type="tel"]:hover {
+	border-color: var(--mustard--300);
+  outline: none;
+}
+
+#bookero-plugin-customer-name:focus, #bookero-plugin-customer-email:focus, input[type="tel"]:focus {
+	border: 2px solid;
+  color: white;
+  border-color: var(--mustard--300);
+  background: var(--mustard--800);
+  outline: none;
+}
+
+/* :valid
+#bookero-plugin-customer-name:valid, #bookero-plugin-customer-email:valid, input[type="tel"]:valid {
+	border: 2px solid var(--mustard--300);
+  background: var(--mustard--300);
+ 	color: black;
+}
+*/
+
+#bookero-plugin-customer-name:invalid, #bookero-plugin-customer-email:invalid, input[type="tel"]:invalid {
+	border: 2px solid var(--red--400);
+  background-color: var(--red--900);
+  color: var(--red--200);
+}
+
+/* customer details section - input labels */
+label[for^="bookero-plugin-customer"] {
+	font-weight: 300;
+  font-family: var(--type--system);
+  font-size: var(--_sizing---text--text-lg);
+  color: var(--grey--100);
+  text-align: left;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 440px;
+  margin-top: 16px;
+}
+
+.bookero-plugin-form-cart-step-2 .bookero-plugin-form-heading {
+	font-size: var(--_sizing---text--text-4xl);
+  font-weight: 500;
+  color: var(--grey--300);
+  text-align: left;
+}
+
+.bookero-plugin-service-value strong {
+	display: none;
+  }
+  
+.bookero-plugin-form-cart-step-1 > h3:first-of-type {
+	display: none;
+  }
+
+.bookero-plugin-form-cart-step-2 > h3:first-of-type {
+display: none;
+}
+
+
+/* preloader */
+
+/*
+.dates-section .calendar-wrapper.is-loading:before {
+    background: hsla(0,0,7%,.5);
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%
+}*/
+
+/* .hours-section .hours-wrapper.is-loading .hours-list */
+.dates-section .calendar-wrapper.is-loading .calendar,
+.hours-section .field.is-required .hours-wrapper.is-loading .hours-list {
+    opacity: 0.2;
+}
+
+
+.dates-section .calendar-wrapper.is-loading:after, 
+.dates-section .week-wrapper.is-loading:after,
+.hours-section .field.is-required .hours-wrapper.is-loading:after {
+    animation: spinner 1s linear infinite;
+    border: 2px solid var(--grey--600);
+    border-top-color: var(--mustard--300) !important;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 36px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    width: 36px;
+    z-index: 1;
+}
+
+
+
+@keyframes spinner {
+    0% {
+        transform: translateX(-50%) translateY(-50%) rotate(0deg)
+    }
+
+    to {
+        transform: translateX(-50%) translateY(-50%) rotate(1turn)
+    }
+}
+
+
+/* Cart header */
+
+.inquiries-list-section:before {
+	content: "Twoje zamówienie";
+  font-weight: 500;
+  font-family: var(--type--display);
+  font-size: var(--_sizing---text--text-4xl);
+  color: var(--grey--300);
+  text-align: left;
+  display: block;
+  margin-bottom: 0.75em;
+  }
+  
+ .result-popup-close::before {
+    content: "Zamknij"; /* Add text */
+    display: inline-block; /* Ensure it appears */
+    color: inherit; /* Match the link color */
+}
+
+.payment-section h3.bookero-plugin-form-heading {
+	display: none;
+}
+</style>
